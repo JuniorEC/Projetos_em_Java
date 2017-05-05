@@ -23,6 +23,7 @@ public class Cellphone extends JFrame {
 	/**
 	 * 
 	 */
+	private JFrame frame;
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
@@ -33,8 +34,8 @@ public class Cellphone extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Cellphone frame = new Cellphone();
-					frame.setVisible(true);
+					Cellphone cell = new Cellphone();
+					cell.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -48,9 +49,9 @@ public class Cellphone extends JFrame {
 	public Cellphone() {
 		super("Bem vindo"); 
 		
-		CriarArquivoTexto.AbreArquivo();
-		LerArquivoDeDados.AbreArquivo();
-		LerArquivoDeDados.LerDados();
+		//CriarArquivoTexto.AbreArquivo();
+		//LerArquivoDeDados.AbreArquivo();
+		//LerArquivoDeDados.LerDados();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 399, 470);
@@ -93,8 +94,7 @@ public class Cellphone extends JFrame {
 				AddContato addContato = new AddContato();
 				addContato.setVisible(true);
 				
-				CriarArquivoTexto.AddDados();
-				CriarArquivoTexto.FechaArquivo();
+				
 				
 			}
 		});
@@ -110,6 +110,10 @@ public class Cellphone extends JFrame {
 				CriarArquivoTexto.FechaArquivo();
 				LerArquivoDeDados.FechaArquivo();
 				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				
+				frame.dispose();
+				AddContato addContato = new AddContato();
+				addContato.setVisible(true);
 			}
 		});
 		btnSair.setVerticalAlignment(SwingConstants.BOTTOM);

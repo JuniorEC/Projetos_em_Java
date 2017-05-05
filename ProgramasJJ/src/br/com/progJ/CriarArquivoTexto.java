@@ -45,7 +45,7 @@ public class CriarArquivoTexto {
 
 		
 
-		while (Resposta.equals("S"))
+		//while (Resposta.equals("S"))
 		{
 			try
 			{
@@ -64,7 +64,7 @@ public class CriarArquivoTexto {
 				
 				if ( Nome != null )
 				{
-					agendaBase = new AgendaBase(Nome, Sobrenome, Telefone, Celular, Email);
+					agendaBase = new AgendaBase();
 					SalvaContato.add(agendaBase);
 					output.writeObject(agendaBase); // Este método grava o objeto na saída.
 				}

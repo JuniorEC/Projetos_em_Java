@@ -2,24 +2,27 @@ package br.com.progJ;
 
 import java.io.Serializable;
 
+import javax.swing.JTextField;
+
 
 
 @SuppressWarnings("serial")
 public class AgendaBase implements Serializable
 {
 
-	private String Nome;
-	private String Sobrenome;
-	private String Telefone;
-	private String Celular;
-	private String Email;
+	public static Object setEmail;
+	private JTextField Nome;
+	private JTextField Sobrenome;
+	private JTextField Telefone;
+	private JTextField Celular;
+	private JTextField Email;
 	
 	public AgendaBase(){
 		
 	}
 	
-	public AgendaBase(String nome, String sobrenome, String telefone,
-			String celular, String email) {
+	public AgendaBase(JTextField nome, JTextField sobrenome, JTextField telefone,
+			JTextField celular, JTextField email) {
 		super();
 		Nome = nome;
 		Sobrenome = sobrenome;
@@ -30,43 +33,43 @@ public class AgendaBase implements Serializable
 	
 	
 
-	public String getNome() {
+	public JTextField getNome() {
 		return Nome;
 	}
 
-	public void setNome(String nome) {
+	public void setNome(JTextField nome) {
 		Nome = nome;
 	}
 
-	public String getSobrenome() {
+	public JTextField getSobrenome() {
 		return Sobrenome;
 	}
 
-	public void setSobrenome(String sobrenome) {
+	public void setSobrenome(JTextField sobrenome) {
 		Sobrenome = sobrenome;
 	}
 
-	public String getTelefone() {
+	public JTextField getTelefone() {
 		return Telefone;
 	}
 
-	public void setTelefone(String telefone) {
+	public void setTelefone(JTextField telefone) {
 		Telefone = telefone;
 	}
 
-	public String getCelular() {
+	public JTextField getCelular() {
 		return Celular;
 	}
 
-	public void setCelular(String celular) {
+	public void setCelular(JTextField celular) {
 		Celular = celular;
 	}
 
-	public String getEmail() {
+	public JTextField getEmail() {
 		return Email;
 	}
 
-	public void setEmail(String email) {
+	public void setEmail(JTextField email) {
 		Email = email;
 	}
 
@@ -98,7 +101,7 @@ public class AgendaBase implements Serializable
 
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append(Nome + Sobrenome +"\n [Nome \t");
+		builder.append(Nome+"\n [Nome \t");
 		builder.append(Nome);
 		builder.append(", Sobrenome \t");
 		builder.append(Sobrenome);
